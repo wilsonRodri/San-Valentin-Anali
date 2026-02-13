@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe6f0;
+    overflow-x: hidden;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.gifPrincipal {
+    width: 250px;
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#siBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: #888;
+    color: white;
+}
+
+/* CARTA FINAL */
+
+#cartaFinal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carta {
+    width: 40%;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.recuerdos {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fotoRecuerdo {
+    position: absolute;
+    width: 110px;
+    border-radius: 15px;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        top: -150px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
