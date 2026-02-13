@@ -94,3 +94,47 @@ button {
         opacity: 0;
     }
 }
+
+/* ========================= */
+/* ADAPTACIÓN PARA CELULAR */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .gifPrincipal {
+        width: 180px;
+    }
+
+    h1 {
+        font-size: 22px;
+        padding: 0 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    #cartaFinal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .carta {
+        width: 85%;
+        margin: 20px 0;
+    }
+
+    .recuerdos {
+        width: 100%;
+        height: 200px;
+    }
+
+    .fotoRecuerdo {
+        width: 80px;
+    }
+
+}
