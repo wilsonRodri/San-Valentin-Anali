@@ -44,9 +44,6 @@ siBtn.addEventListener("click", () => {
 
 function generarRecuerdos() {
 
-    const izquierda = document.querySelector(".izquierda");
-    const derecha = document.querySelector(".derecha");
-
     const totalFotos = 31;
 
     for (let i = 1; i <= totalFotos; i++) {
@@ -55,15 +52,20 @@ function generarRecuerdos() {
         img.src = `assets/img/recuerdos/foto${i}.jpg`;
         img.classList.add("fotoRecuerdo");
 
+        // Posición horizontal totalmente libre
         img.style.left = Math.random() * 100 + "vw";
+
+        // Duración aleatoria
         img.style.animationDuration = (6 + Math.random() * 6) + "s";
+
+        // Delay diferente para que no salgan juntas
         img.style.animationDelay = Math.random() * 5 + "s";
+
+        // Ligera rotación para efecto más natural
         img.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
 
-        if (i % 2 === 0) {
-            izquierda.appendChild(img);
-        } else {
-            derecha.appendChild(img);
-        }
+        // 🔥 Ahora se agregan directo al contenedor principal
+        cartaFinal.appendChild(img);
     }
 }
+
