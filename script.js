@@ -56,7 +56,7 @@ function generarRecuerdos() {
         img.style.left = Math.random() * 100 + "vw";
 
         // Duración aleatoria
-        img.style.animationDuration = (6 + Math.random() * 6) + "s";
+        img.style.animationDuration = (12 + Math.random() * 10) + "s";
 
         // Delay diferente para que no salgan juntas
         img.style.animationDelay = Math.random() * 5 + "s";
