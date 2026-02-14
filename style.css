@@ -95,10 +95,6 @@ button {
     }
 }
 
-/* ========================= */
-/* 📱 ADAPTACIÓN PARA CELULAR */
-/* ========================= */
-
 @media (max-width: 768px) {
 
     .gifPrincipal {
@@ -115,22 +111,25 @@ button {
         padding: 10px 18px;
     }
 
-    /* Carta centrada en vertical */
+    /* Carta en vertical y con scroll */
     #cartaFinal {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        height: 100vh;
+        height: auto; /* 🔥 ya no forzamos 100vh */
+        min-height: 100vh;
+        padding: 60px 0;
+        overflow: visible;
         position: relative;
     }
 
     .carta {
-        width: 85%;
+        width: 90%;
         margin: 20px 0;
-        z-index: 10; /* encima de las fotos */
+        z-index: 10;
     }
 
-    /* Fotos ocupan toda la pantalla */
+    /* Fotos ocupan toda la pantalla y todo el alto */
     .recuerdos {
         position: absolute;
         width: 100%;
@@ -138,11 +137,11 @@ button {
         top: 0;
         left: 0;
         z-index: 1;
-        pointer-events: none; /* no bloquean toques */
+        pointer-events: none;
     }
 
     .fotoRecuerdo {
-        width: 75px;
+        width: 70px;
         opacity: 0.85;
     }
 
