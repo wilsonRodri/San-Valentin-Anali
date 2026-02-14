@@ -74,10 +74,17 @@ button {
     overflow: hidden;
 }
 
+/* ✨ ESTILO POLAROID ✨ */
 .fotoRecuerdo {
     position: absolute;
     width: 110px;
-    border-radius: 15px;
+
+    background: white;
+    padding: 10px 10px 25px 10px; /* espacio inferior más grande tipo polaroid */
+    border-radius: 8px;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+
     animation: caer linear infinite;
 }
 
@@ -94,6 +101,10 @@ button {
         opacity: 0;
     }
 }
+
+/* ========================= */
+/* 📱 ADAPTACIÓN PARA CELULAR */
+/* ========================= */
 
 @media (max-width: 768px) {
 
@@ -116,7 +127,7 @@ button {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        height: auto; /* 🔥 ya no forzamos 100vh */
+        height: auto;
         min-height: 100vh;
         padding: 60px 0;
         overflow: visible;
@@ -129,7 +140,7 @@ button {
         z-index: 10;
     }
 
-    /* Fotos ocupan toda la pantalla y todo el alto */
+    /* Fotos ocupan toda la pantalla */
     .recuerdos {
         position: absolute;
         width: 100%;
@@ -140,9 +151,11 @@ button {
         pointer-events: none;
     }
 
+    /* Polaroid más pequeña en móvil */
     .fotoRecuerdo {
-        width: 70px;
-        opacity: 0.85;
+        width: 75px;
+        padding: 6px 6px 18px 6px;
+        opacity: 0.9;
     }
 
 }
