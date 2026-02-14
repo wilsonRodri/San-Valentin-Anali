@@ -55,7 +55,7 @@ function generarRecuerdos() {
         img.src = `assets/img/recuerdos/foto${i}.jpg`;
         img.classList.add("fotoRecuerdo");
 
-        img.style.left = Math.random() * 80 + "px";
+        img.style.left = Math.random() * 100 + "px";
         img.style.animationDuration = (6 + Math.random() * 6) + "s";
         img.style.animationDelay = Math.random() * 5 + "s";
         img.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
